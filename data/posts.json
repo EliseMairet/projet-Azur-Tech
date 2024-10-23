@@ -1,0 +1,22 @@
+[
+    {
+        "author": "Alice",
+        "content": "C'est une belle journée aujourd'hui !",
+        "image": "images/post1.jpg",
+        "reactions": {
+            "like": 5,
+            "love": 3,
+            "dislike": 0
+        }
+    },
+    {
+        "author": "Bob",
+        "content": "Regardez mon nouveau chat !",
+        "image": "images/post2.jpg",
+        "reactions": {
+            "like": 12,
+            "love": 7,
+            "dislike": 1
+        }
+    }
+]
