@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         conversationDiv.addEventListener('click', () => {
             showConversationDetail(conversation)
             selectedConversation = conversation // Conserver la conversation sélectionnée
-        });
+        })
 
         return conversationDiv
     }

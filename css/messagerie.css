@@ -147,3 +147,82 @@ button:hover {
     /* Légère élévation au survol */
     box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
 }
+
+/* --------- Media Queries for Responsive Design ----------- */
+@media only screen and (max-width: 768px) {
+    /* Ajustements pour tablettes et téléphones */
+    
+    header {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    main {
+        flex-direction: column; /* Empile les sections au lieu de les afficher en ligne */
+        gap: 15px;
+        width: 100%;
+    }
+
+    section {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: 16px; /* Réduit la taille des titres */
+    }
+
+    input {
+        width: calc(100% - 90px); /* Ajuste la largeur de l'input */
+    }
+
+    button {
+        padding: 8px 15px; /* Réduit la taille des boutons */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Ajustements pour les petits téléphones */
+    
+    header {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    main {
+        gap: 10px;
+    }
+
+    section {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .conversation {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    .last-message {
+        font-size: 12px;
+    }
+
+    .profile-pic {
+        width: 30px;
+        height: 30px;
+    }
+
+    input {
+        width: calc(100% - 80px);
+        padding: 8px;
+    }
+
+    button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}

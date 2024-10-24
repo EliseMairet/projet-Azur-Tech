@@ -77,7 +77,7 @@ function createParticles(button, type) {
     }
 
     const numParticles = 15
-    const rect = button.getBoundingClientRect()
+    const rect = button.getBoundingClientRect() // Récupère la position du bouton
 
     for (let i = 0; i < numParticles; i++) {
         const particle = document.createElement('div')
@@ -87,21 +87,23 @@ function createParticles(button, type) {
         // Positionnement des particules autour du bouton
         particle.style.left = `${rect.left + rect.width / 2}px`
         particle.style.top = `${rect.top + rect.height / 2}px`
-        
+
         document.body.appendChild(particle)
 
         // Animation
         setTimeout(() => {
+            // Déplace les particules vers une position aléatoire
             particle.style.transform = `translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px) scale(0)`
             particle.style.opacity = '0'
         }, 100)
 
-        // Supprimer la particule après l'animation
+        // Supprime la particule après l'animation
         setTimeout(() => {
             particle.remove()
         }, 1000)
     }
 }
+
 
 
 // Fonction pour afficher l'image en plein écran
