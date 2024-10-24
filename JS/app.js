@@ -1,19 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     const postsContainer = document.getElementById('posts-container')
 
-    // Chargement des données des posts à partir d'un fichier JSON local
+    // Charger le fichier JSON contenant les posts
     fetch('data/posts.json')
         .then(response => response.json())
         .then(data => {
-            // Pour chaque post dans le fichier JSON, crée un élément et l'ajoute au DOM
             data.forEach(post => {
                 const postElement = createPostElement(post)
                 postsContainer.appendChild(postElement)
             })
         })
+        .catch(error => console.error('Erreur lors du chargement des posts:', error))
 })
 
-// Fonction qui crée un élément DOM pour un post
+// Fonction pour créer un élément de post
 function createPostElement(post) {
     const postDiv = document.createElement('div')
     postDiv.classList.add('post')
@@ -27,7 +27,7 @@ function createPostElement(post) {
     postDiv.appendChild(author)
     postDiv.appendChild(content)
 
-    // Si le post contient une image, ajoute l'image et l'événement pour l'ouvrir en plein écran
+    // Si le post contient une image, ajouter l'image et l'événement pour l'ouvrir en plein écran
     if (post.image) {
         const image = document.createElement('img')
         image.src = post.image
@@ -39,28 +39,72 @@ function createPostElement(post) {
         })
     }
 
-    // Ajout des boutons de réaction (Like, Love, Dislike)
-    const reactionsDiv = document.createElement('div')
-    reactionsDiv.classList.add('reactions')
+   // Ajouter les boutons de réaction (Like, Love, Dislike)
+const reactionsDiv = document.createElement('div')
+reactionsDiv.classList.add('reactions')
 
-    const likeButton = document.createElement('button')
-    likeButton.textContent = `Like (${post.reactions.like})`
-    reactionsDiv.appendChild(likeButton)
+const likeButton = document.createElement('button')
+likeButton.textContent = `Like (${post.reactions.like})`
+likeButton.addEventListener('click', () => {
+    createParticles(likeButton, 'like')
+})
+reactionsDiv.appendChild(likeButton)
 
-    const loveButton = document.createElement('button')
-    loveButton.textContent = `Love (${post.reactions.love})`
-    reactionsDiv.appendChild(loveButton)
+const loveButton = document.createElement('button')
+loveButton.textContent = `Love (${post.reactions.love})`
+loveButton.addEventListener('click', () => {
+    createParticles(loveButton, 'love')
+})
+reactionsDiv.appendChild(loveButton)
 
-    const dislikeButton = document.createElement('button')
-    dislikeButton.textContent = `Dislike (${post.reactions.dislike})`
-    reactionsDiv.appendChild(dislikeButton)
+const dislikeButton = document.createElement('button')
+dislikeButton.textContent = `Dislike (${post.reactions.dislike})`
+dislikeButton.addEventListener('click', () => {
+    createParticles(dislikeButton, 'dislike')
+})
+reactionsDiv.appendChild(dislikeButton)
 
-    postDiv.appendChild(reactionsDiv)
+postDiv.appendChild(reactionsDiv)
 
-    return postDiv
+return postDiv
+
+// Fonction pour créer des particules autour du bouton cliqué
+function createParticles(button, type) {
+    const colors = {
+        like: '#00bfff',
+        love: '#ff1493',
+        dislike: '#ff6347'
+    }
+
+    const numParticles = 15
+    const rect = button.getBoundingClientRect()
+
+    for (let i = 0; i < numParticles; i++) {
+        const particle = document.createElement('div')
+        particle.classList.add('particle')
+        particle.style.backgroundColor = colors[type]
+
+        // Positionnement des particules autour du bouton
+        particle.style.left = `${rect.left + rect.width / 2}px`
+        particle.style.top = `${rect.top + rect.height / 2}px`
+        
+        document.body.appendChild(particle)
+
+        // Animation
+        setTimeout(() => {
+            particle.style.transform = `translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px) scale(0)`
+            particle.style.opacity = '0'
+        }, 100)
+
+        // Supprimer la particule après l'animation
+        setTimeout(() => {
+            particle.remove()
+        }, 1000)
+    }
 }
 
-// Fonction pour afficher l'image en plein écran lorsque l'on clique dessus
+
+// Fonction pour afficher l'image en plein écran
 function openImageFullscreen(imageSrc) {
     const overlay = document.createElement('div')
     overlay.style.position = 'fixed'
@@ -84,4 +128,5 @@ function openImageFullscreen(imageSrc) {
     overlay.addEventListener('click', () => {
         document.body.removeChild(overlay)
     })
+} 
 }

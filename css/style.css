@@ -6,57 +6,100 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0e5ec;
     color: #333;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 header {
-    background-color: #f0f0f0;
+    background-color: #e0e5ec;
     padding: 20px;
     width: 100%;
     text-align: center;
-    box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+    border-radius: 12px;
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
     margin-bottom: 20px;
 }
 
-/* Neumorphisme pour les sections */
 main {
     width: 90%;
-    max-width: 800px;
     margin: 20px;
 }
 
 section {
-    background-color: #f0f0f0;
+    background-color: #e0e5ec;
     border-radius: 12px;
     padding: 20px;
-    box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
     margin-bottom: 20px;
 }
 
-/* Style des amis (pour la page liste d'amis) */
-.friend {
+.post {
+    background-color: #e0e5ec;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
     display: flex;
-    align-items: center;
-    background-color: #f0f0f0;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 12px;
-    box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.friend img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.friend-name {
+h3 {
     font-size: 18px;
-    font-weight: bold;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+}
+
+img {
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+    max-width: 70%;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+    cursor: pointer;
+}
+
+
+/* Style des boutons de réactions */
+.reactions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.reactions button {
+    background-color: #e0e5ec;
+    border: none;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+    transition: all 0.2s ease-in-out;
+}
+
+.reactions button:active {
+    box-shadow: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #ffffff;
+}
+
+/* Style des particules */
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 1;
+    transition: transform 1s ease, opacity 1s ease;
+    z-index: 1000;
+    box-shadow: 2px 2px 4px #bebebe, -2px -2px 4px #ffffff;
 }
