@@ -1,0 +1,42 @@
+[
+    {
+        "author": "Alice",
+        "content": "C'est une belle journée aujourd'hui !",
+        "image": "assets/images/posts/image1.jpg",
+        "reactions": {
+            "like": 5,
+            "love": 3,
+            "dislike": 0
+        }
+    },
+    {
+        "author": "Bob",
+        "content": "Regardez mon nouveau chat !",
+        "image": "assets/images/posts/image2.jpg",
+        "reactions": {
+            "like": 12,
+            "love": 7,
+            "dislike": 1
+        }
+    },
+    {
+        "author": "Charlie",
+        "content": "Je viens de finir un super livre. Quelqu'un l'a déjà lu ?",
+        "image": "assets/images/posts/image3.jpg",
+        "reactions": {
+            "like": 8,
+            "love": 4,
+            "dislike": 0
+        }
+    },
+    {
+        "author": "David",
+        "content": "Voici la vue depuis ma randonnée d'aujourd'hui !",
+        "image": "assets/images/posts/image4.jpg",
+        "reactions": {
+            "like": 10,
+            "love": 6,
+            "dislike": 2
+        }
+    }
+]

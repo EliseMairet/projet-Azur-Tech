@@ -1,0 +1,187 @@
+/* Styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0e5ec;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    background-color: #e0e5ec;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+    margin-bottom: 20px;
+}
+
+main {
+    width: 90%;
+    margin: 20px;
+}
+
+section {
+    background-color: #e0e5ec;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+    margin-bottom: 20px;
+}
+
+.post {
+    background-color: #e0e5ec;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+}
+
+img {
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+    max-height: 700px;
+    max-width: 70%;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+    cursor: pointer;
+}
+
+
+/* Style des boutons de réactions */
+.reactions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.reactions button {
+    background-color: #e0e5ec;
+    border: none;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+    transition: all 0.2s ease-in-out;
+}
+
+.reactions button:active {
+    box-shadow: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #ffffff;
+}
+
+/* Style des particules */
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 1;
+    transition: transform 1s ease, opacity 1s ease;
+    z-index: 1000;
+    box-shadow: 2px 2px 4px #bebebe, -2px -2px 4px #ffffff;
+    pointer-events: none; 
+}
+
+/* --------- Media Queries for Responsive Design ----------- */
+@media only screen and (max-width: 768px) {
+    /* Ajustements pour tablettes et téléphones */
+    
+    header {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    main {
+        width: 95%; /* Augmente la largeur du contenu */
+        margin: 10px;
+    }
+
+    section {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .post {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: 16px; /* Réduit la taille des titres */
+    }
+
+    p {
+        font-size: 14px; /* Réduit la taille du texte */
+    }
+
+    img {
+        max-width: 100%; /* L'image prend toute la largeur du conteneur */
+        border-radius: 8px;
+    }
+
+    .reactions button {
+        padding: 8px; /* Réduit la taille des boutons de réactions */
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Ajustements supplémentaires pour téléphones plus petits */
+    
+    header {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    main {
+        width: 100%;
+        margin: 5px;
+    }
+
+    section {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .post {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .reactions button {
+        padding: 6px;
+        font-size: 10px;
+    }
+}

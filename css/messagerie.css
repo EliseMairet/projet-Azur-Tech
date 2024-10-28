@@ -1,0 +1,227 @@
+/* Styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0; /* Couleur de fond neutre pour le style neumorphique */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #e0e0e0; /* Même couleur que le fond pour un effet de relief */
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    border-radius: 12px;
+    /* Ombres pour l'effet neumorphique */
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+    margin-bottom: 20px;
+}
+
+main {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+/* Section des conversations */
+section {
+    background-color: #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+/* Style pour les éléments de conversation */
+.conversation {
+    background-color: #e0e0e0;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    /* Ombres neumorphiques */
+    box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+    transition: box-shadow 0.3s ease;
+}
+
+.conversation:hover {
+    /* Légère élévation au survol */
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+}
+
+.last-message {
+    font-size: 14px;
+    color: #777;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Section des détails de messages */
+#message-detail {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Liste des messages */
+.messages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 12px;
+    /* Ombres pour l'effet en relief */
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    /* Ombres pour l'image de profil */
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+}
+
+strong {
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+/* Champ de saisie et bouton d'envoi */
+input {
+    max-width: 100%;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 12px;
+    border: none;
+    background-color: #e0e0e0;
+    box-shadow: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #ffffff;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+input:focus {
+    box-shadow: inset 2px 2px 4px #bebebe, inset -2px -2px 4px #ffffff;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    border: none;
+    background-color: #e0e0e0;
+    box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+button:hover {
+    /* Légère élévation au survol */
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+}
+
+/* --------- Media Queries for Responsive Design ----------- */
+@media only screen and (max-width: 768px) {
+    /* Ajustements pour tablettes et téléphones */
+    
+    header {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    main {
+        flex-direction: column; /* Empile les sections au lieu de les afficher en ligne */
+        gap: 15px;
+        width: 100%;
+    }
+
+    section {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: 16px; /* Réduit la taille des titres */
+    }
+
+    input {
+        width: calc(100% - 90px); /* Ajuste la largeur de l'input */
+    }
+
+    button {
+        padding: 8px 15px; /* Réduit la taille des boutons */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Ajustements pour les petits téléphones */
+    
+    header {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    main {
+        gap: 10px;
+    }
+
+    section {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .conversation {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    .last-message {
+        font-size: 12px;
+    }
+
+    .profile-pic {
+        width: 30px;
+        height: 30px;
+    }
+
+    input {
+        width: calc(100% - 80px);
+        padding: 8px;
+    }
+
+    button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}

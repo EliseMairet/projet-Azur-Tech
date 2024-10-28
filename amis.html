@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Réseau Social - Liste d'Amis</title>
+    <link rel="stylesheet" href="CSS/amis.css">
+</head>
+<body>
+    <header>
+        <h1>Liste d'Amis</h1>
+    </header>
+
+    <main>
+        <section id="filter-section">
+            <input type="text" id="filter-input" placeholder="Rechercher un ami par nom...">
+        </section>
+        <section id="friend-list">
+            <div class="friend" draggable="true">
+                <img src="profile1.jpg" alt="Profil Ami 1">
+                <span class="friend-name">Alice</span>
+                <a href="messagerie.html" class="message-link">Messagerie</a>
+            </div>
+            <div class="friend" draggable="true">
+                <img src="profile2.jpg" alt="Profil Ami 2">
+                <span class="friend-name">Bob</span>
+                <a href="messagerie.html" class="message-link">Messagerie</a>
+            </div>
+            <div class="friend" draggable="true">
+                <img src="profile3.jpg" alt="Profil Ami 3">
+                <span class="friend-name">Charlie</span>
+                <a href="messagerie.html" class="message-link">Messagerie</a>
+            </div>
+            <div class="friend" draggable="true">
+                <img src="profile4.jpg" alt="Profil Ami 4">
+                <span class="friend-name">David</span>
+                <a href="messagerie.html" class="message-link">Messagerie</a>
+            </div>
+            <!-- Plus d'amis codés en dur ici -->
+        </section>
+    </main>
+
+    <script src="JS/amis.js"></script>
+</body>
+</html>

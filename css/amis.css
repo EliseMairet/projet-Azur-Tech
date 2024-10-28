@@ -1,0 +1,217 @@
+/* Styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0; /* Fond légèrement gris pour le neumorphisme */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #e0e0e0; /* Même couleur que le fond pour l'effet en relief */
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    border-radius: 12px;
+    /* Ombres pour le neumorphisme */
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+    margin-bottom: 20px;
+}
+
+main {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px;
+}
+
+section {
+    background-color: #e0e0e0; /* Même couleur pour l'effet de relief */
+    border-radius: 12px;
+    padding: 20px;
+    /* Ombres neumorphiques */
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Style des amis (pour la page liste d'amis) */
+.friend {
+    display: flex;
+    align-items: center;
+    background-color: #e0e0e0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    /* Ombres neumorphiques */
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+    transition: box-shadow 0.3s ease;
+}
+
+.friend:hover {
+    /* Effet d'élévation lorsqu'on survole un ami */
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+}
+
+.friend img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    /* Ombres pour l'image de profil en style neumorphique */
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+}
+
+.friend-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Style du champ de recherche */
+#filter-section {
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+    margin-bottom: 20px;
+}
+
+#filter-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    background-color: #e0e0e0;
+    box-shadow: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #ffffff;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+#filter-input:focus {
+    box-shadow: inset 2px 2px 4px #bebebe, inset -2px -2px 4px #ffffff;
+}
+
+/* Style des liens vers la messagerie */
+.message-link {
+    margin-left: auto;
+    padding: 8px 12px;
+    background-color: #e0e0e0;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+    transition: box-shadow 0.3s ease;
+}
+
+.message-link:hover {
+    box-shadow: 2px 2px 4px #bebebe, -2px -2px 4px #ffffff;
+}
+
+/* Styles pour les téléphones (max-width: 768px, correspond à des tablettes ou téléphones) */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    main {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+        margin: 0;
+    }
+
+    section {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .friend {
+        padding: 8px;
+        flex-direction: column; /* Aligner les éléments en colonne pour un affichage vertical */
+        text-align: center;
+    }
+
+    .friend img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
+    .friend-name {
+        font-size: 16px;
+    }
+
+    /* Ajustement du champ de recherche pour les petits écrans */
+    #filter-input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Ajuster le lien de message pour qu'il prenne moins de place */
+    .message-link {
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+}
+
+/* Styles pour les très petits écrans (max-width: 480px, smartphones) */
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    header {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    main {
+        width: 100%;
+        padding: 5px;
+        margin: 0;
+    }
+
+    section {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .friend {
+        padding: 6px;
+        flex-direction: column;
+    }
+
+    .friend img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .friend-name {
+        font-size: 14px;
+    }
+
+    /* Champ de recherche réduit pour les petits écrans */
+    #filter-input {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    /* Réduire les boutons et les liens */
+    .message-link {
+        padding: 4px 6px;
+        font-size: 12px;
+    }
+}

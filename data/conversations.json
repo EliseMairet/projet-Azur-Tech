@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "participants": [
+            {
+                "name": "Alice",
+                "profilePicture": "images/alice.jpg"
+            },
+            {
+                "name": "Bob",
+                "profilePicture": "images/bob.jpg"
+            }
+        ],
+        "messages": [
+            {
+                "timestamp": "2024-10-23T08:00:00Z",
+                "sender": "Alice",
+                "content": "Salut Bob !"
+            },
+            {
+                "timestamp": "2024-10-23T08:05:00Z",
+                "sender": "Bob",
+                "content": "Salut Alice ! Comment ça va ?"
+            },
+            {
+                "timestamp": "2024-10-23T08:10:00Z",
+                "sender": "Alice",
+                "content": "Je vais bien, merci. Et toi ?"
+            },
+            {
+                "timestamp": "2024-10-23T08:12:00Z",
+                "sender": "Bob",
+                "content": "Super, merci !"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "participants": [
+            {
+                "name": "Alice",
+                "profilePicture": "images/alice.jpg"
+            },
+            {
+                "name": "Charlie",
+                "profilePicture": "images/charlie.jpg"
+            }
+        ],
+        "messages": [
+            {
+                "timestamp": "2024-10-23T09:00:00Z",
+                "sender": "Charlie",
+                "content": "Hey, as-tu vu ce film ?"
+            },
+            {
+                "timestamp": "2024-10-23T09:05:00Z",
+                "sender": "Alice",
+                "content": "Non pas encore, mais il est sur ma liste !"
+            },
+            {
+                "timestamp": "2024-10-23T09:10:00Z",
+                "sender": "Charlie",
+                "content": "Tu devrais le regarder, il est génial."
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "participants": [
+            {
+                "name": "Alice",
+                "profilePicture": "images/alice.jpg"
+            },
+            {
+                "name": "David",
+                "profilePicture": "images/david.jpg"
+            }
+        ],
+        "messages": [
+            {
+                "timestamp": "2024-10-23T10:00:00Z",
+                "sender": "David",
+                "content": "Salut Alice, tu es dispo pour une partie ce soir ?"
+            },
+            {
+                "timestamp": "2024-10-23T10:05:00Z",
+                "sender": "Alice",
+                "content": "Oui, bien sûr, à quelle heure ?"
+            },
+            {
+                "timestamp": "2024-10-23T10:07:00Z",
+                "sender": "David",
+                "content": "Disons 20h ?"
+            },
+            {
+                "timestamp": "2024-10-23T10:10:00Z",
+                "sender": "Alice",
+                "content": "Parfait, à ce soir !"
+            }
+        ]
+    }
+]
